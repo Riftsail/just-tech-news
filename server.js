@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // turn on routes
-const routes = require('./controllers/');
+const routes = require('./controllers/index');
 
 // turn on connection to database and server
 sequelize.sync({ force: false }).then(() => {
